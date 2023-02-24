@@ -27,7 +27,7 @@ function getproduct(){
                                 <h5 class='card-title text-center'> $product_name </h5>
                                 <p class='card-text small'>$product_description</p>
                                 <p class='card-text small'>Giá :$product_price</p>
-                                <a href='#' class='btn btn-info'>Thêm </a>
+                               
                                 <a href='product_detail.php?id=$product_id' class='btn btn-secondary  '>Chi tiết</a>
                             </div>
                         </div>
@@ -63,7 +63,7 @@ function getunique_category(){
                                 <h5 class='card-title text-center'> $product_name </h5>
                                 <p class='card-text small'>$product_description</p>
                                 <p class='card-text small'>Giá :$product_price</p>
-                                <a href='#' class='btn btn-info'>Thêm </a>
+                               
                                 <a href='product_detail.php?id=$product_id' class='btn btn-secondary  '>Chi tiết</a>
                             </div>
                         </div>
@@ -98,7 +98,7 @@ function getunique_brand(){
                                 <h5 class='card-title text-center'> $product_name </h5>
                                 <p class='card-text small'>$product_description</p>
                                 <p class='card-text small'>Giá :$product_price</p>
-                                <a href='#' class='btn btn-info'>Thêm </a>
+                               
                                 <a href='product_detail.php?id=$product_id' class='btn btn-secondary  '>Chi tiết</a>
                             </div>
                         </div>

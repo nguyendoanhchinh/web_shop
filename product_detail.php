@@ -70,6 +70,15 @@ include "inc/header.php";
                         <button class="size" data-toggle="tooltip" title="large">40</button>
                         <button class="size" data-toggle="tooltip" title="xtra large">41</button>
                     </h5>
+                    <div class="product-count">
+                        <label for="size">Số lượng</label>
+                        <form action="#" class="display-flex">
+
+                            <input type="text" name="quantity" value="0" class="qty">
+
+                        </form>
+
+                    </div>
                     <p class="product-description" style="height: 290px;"> <?php echo $row['product_description'] ?></h4>
                     <p class="product-price"> Giá: <span class="text-danger"><?php echo $row['product_price'] ?></span></h4>
 
@@ -84,6 +93,50 @@ include "inc/header.php";
         </div>
     </div>
 </div>
+
+<div class='container mt-5'>
+
+    <div class='d-flex justify-content-between align-items-center mb-3'>
+
+        <span style='font-size: 20px;'>SẢN PHẨM TƯƠNG TỰ</span>
+    </div>
+</div>
+<div class='row'>
+<?php
+    $select_product1= "select * from `products` order by rand() limit 0,4";
+    $query=mysqli_query($conn,$select_product1);
+    $row1=mysqli_fetch_assoc($query);
+    while ($row1=mysqli_fetch_assoc($query)){
+        $product_id1=$row1['product_id'];
+        $product_name1=$row1['product_name'];
+        $product_description1=$row1['product_description'];
+        $product_image1=$row1['product_image'];
+        $product_price1=$row1['product_price'];
+
+        echo "
+    
+        
+            <div class='col-md-4'>
+                <div class='card'>
+                    <div class='text-center'>
+                        <img src='./admin/image/$product_image1'  width=250>
+                    </div>
+                    <div class='text-center'>
+                        <h5> $product_name1 </h5>
+                        <span class='text-success'> $product_price1</span>
+                    </div>
+                    </div>
+            </div>
+       ";
+    }
+
+
+?>
+
+</div>
+</div>
+</div>
+
 <?php
 include "inc/footer.php";
 ?>

@@ -14,7 +14,7 @@ include "inc/header.php";
 <!--        </nav>-->
 
         <div class="bg-light">
-              <h3 class="text-center">SHOPSTORE</h3>
+              <h3 class="text-center">Sản phẩm bán chạy</h3>
         </div>
 
         <div class="row">
