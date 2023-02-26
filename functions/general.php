@@ -17,8 +17,7 @@ function getproduct(){
         $product_description=$row['product_description'];
         $product_image=$row['product_image'];
         $product_price=$row['product_price'];
-        $category_id=$row["category_id"];
-        $brand_id=$row["brand_id"];
+
         echo "
                         <div  class='col-md-4 mb-2'>
                         <div class='card' >
@@ -63,7 +62,7 @@ function getunique_category(){
                                 <h5 class='card-title text-center'> $product_name </h5>
                                 <p class='card-text small'>$product_description</p>
                                 <p class='card-text small'>Giá :$product_price</p>
-                               
+                                
                                 <a href='product_detail.php?id=$product_id' class='btn btn-secondary  '>Chi tiết</a>
                             </div>
                         </div>
@@ -98,7 +97,7 @@ function getunique_brand(){
                                 <h5 class='card-title text-center'> $product_name </h5>
                                 <p class='card-text small'>$product_description</p>
                                 <p class='card-text small'>Giá :$product_price</p>
-                               
+                                
                                 <a href='product_detail.php?id=$product_id' class='btn btn-secondary  '>Chi tiết</a>
                             </div>
                         </div>

@@ -1,3 +1,11 @@
+<?php
+include "../config/connect.php";
+session_start();
+if(!isset($_SESSION['admin_name'])){
+    header('location:./login.php');
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,7 +33,7 @@
                 <nav class="navbar navbar-expand-lg navbar-light pr-5">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a href="" class="nav-link text-dark">Welcome Admin</a>
+                            <a href="" class="nav-link text-dark"><?php echo $_SESSION['admin_name'] ?></a>
                         </li>
                     </ul>
                 </nav>
@@ -48,11 +56,7 @@
                      Thêm sản phẩm
                 </a>
             </li>
-            <li class="sidebar-list-item">
-                <a href="#" >
-                      Thông tin sản phẩm
-                </a>
-            </li>
+
             <li class="sidebar-list-item">
                 <a href="index.php?insert_category" >
                     Thêm loại giày

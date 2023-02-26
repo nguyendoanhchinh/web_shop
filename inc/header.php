@@ -1,4 +1,10 @@
-
+<?php
+include "../config/connect.php";
+session_start();
+if(!isset($_SESSION['user_name'])){
+    header('location:login.php');
+}
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -26,11 +32,9 @@
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="index.php">Trang chủ</a>
                         </li>
+
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Sản phẩm</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Đăng kí</a>
+                            <a class="nav-link" href="#">Giới Thiệu</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Liên hệ</a>
@@ -39,13 +43,13 @@
                             <a class="nav-link" href="#"><i class="fa-solid fa-cart-shopping"><sup>1</sup></i></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Giá</a>
+                            <a class="nav-link" href="#">Hướng dẫn vận chuyển </a>
                         </li>
 
                     </ul>
 
                     <form class="d-flex">
-                        <a href="#" class="btn btn-outline-light">Đăng nhập</a>
+                        <a href="#" class=""><?php echo $_SESSION['user_name'] ?></a>
 
                     </form>
                 </div>

@@ -2,6 +2,8 @@
 include "config/connect.php";
 include "functions/general.php";
 include "inc/header.php";
+
+
 ?>
 
 <!--       <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">-->
